@@ -67,9 +67,28 @@ int main() {
                     edgeStartNode = -1;
                     std::cout << "Edge adding mode activated\n";
                 }
-                else if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::S) {
+                else if (event.key.code == sf::Keyboard::S) {
                     selectingSource = true;
                     std::cout << "Dijkstra Mode Activated. Select source and target nodes.\n";
+                }
+                else if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::R) {
+                    // Reset nodes
+                    for (auto& node : graph.getNodes()) {
+                        node.shape.setFillColor(sf::Color::Cyan); // Default node color
+                    }
+
+                    // Reset edges
+                    for (auto& edge : graph.getEdges()) {
+                        edge.line[0].color = sf::Color::White; // Default edge color
+                        edge.line[1].color = sf::Color::White;
+                    }
+
+                    // Reset selections
+                    sourceNode = -1;
+                    targetNode = -1;
+                    selectingSource = true;
+
+                    std::cout << "Graph view reset to default.\n";
                 }
                 else if (event.key.code == sf::Keyboard::Escape) {
                     window.close();
