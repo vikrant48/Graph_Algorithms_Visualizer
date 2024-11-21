@@ -77,7 +77,7 @@ void Algorithms::dfs(Graph& graph, int startNode, sf::RenderWindow& window) {
 void Algorithms::dijkstra(Graph& graph, int sourceNode, int targetNode, sf::RenderWindow& window) {
     const auto& nodes = graph.getNodes();
     const auto& adjacencyList = graph.getAdjacencyList();
-    if (sourceNode >= nodes.size()) return;
+    if (sourceNode >= nodes.size() || targetNode >= nodes.size()) return;
 
     std::vector<float> dist(nodes.size(), std::numeric_limits<float>::infinity());
     std::vector<int> previous(nodes.size(), -1);
@@ -112,7 +112,6 @@ void Algorithms::dijkstra(Graph& graph, int sourceNode, int targetNode, sf::Rend
     // Highlight the shortest path
     int currentNode = targetNode;
     while (currentNode != -1 && previous[currentNode] != -1) {
-        // Highlight the edge
         for (auto& edge : graph.getEdges()) {
             if ((edge.from == currentNode && edge.to == previous[currentNode]) ||
                 (edge.to == currentNode && edge.from == previous[currentNode])) {
@@ -121,13 +120,12 @@ void Algorithms::dijkstra(Graph& graph, int sourceNode, int targetNode, sf::Rend
                 break;
             }
         }
-
-        // Highlight the node
         graph.getNodes()[currentNode].shape.setFillColor(sf::Color::Yellow);
-
         currentNode = previous[currentNode];
     }
 
+
     // Highlight the source node
     graph.getNodes()[sourceNode].shape.setFillColor(sf::Color::Red);
+    graph.getNodes()[targetNode].shape.setFillColor(sf::Color::Red);
 }
