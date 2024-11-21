@@ -42,4 +42,15 @@
   <ItemGroup>
     <None Include="Readme.md" />
   </ItemGroup>
+  <ItemGroup>
+    <Media Include="..\..\..\..\Videos\Screen Recordings\BFS.mp4">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="..\..\..\..\Videos\Screen Recordings\DFS.mp4">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="..\..\..\..\Videos\Screen Recordings\Dijkstra.mp4">
+      <Filter>Resource Files</Filter>
+    </Media>
+  </ItemGroup>
 </Project>
