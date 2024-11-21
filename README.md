@@ -80,7 +80,7 @@ This project is a **Graph Visualization Tool** that allows users to create, expl
 Below are videos demonstrating each algorithm:
 
 ### **1. Dijkstra's Algorithm Overview**
-![Dijkstra Overview](./assets/dijkstra.gif)
+![Dijkstra Overview](./assets/Dijkstra_gif_.gif)
 
 ### **2. Breadth-First Search (BFS)**
 ![BFS Demonstration](./assets/bfs.gif)
