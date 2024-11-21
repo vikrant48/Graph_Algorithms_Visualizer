@@ -80,13 +80,13 @@ This project is a **Graph Visualization Tool** that allows users to create, expl
 Below are videos demonstrating each algorithm:
 
 ### **1. Dijkstra's Algorithm Overview**
-[![Dijkstra Overview]()](./Resource Files/Dijkstra.mp4)
+[![Dijkstra Overview](./Resource%20Files/Dijkstra.mp4)](./Resource%20Files/Dijkstra.mp4)
 
 ### **2. Breadth-First Search (BFS)**
-[![BFS Demonstration]()](./Resource Files/BFS.mp4)
+[![BFS Demonstration](./Resource%20Files/BFS.mp4)](./Resource%20Files/BFS.mp4)
 
 ### **3. Depth-First Search (DFS)**
-[![DFS Demonstration]()](./Resource Files/DFS.mp4)
+[![DFS Demonstration](./Resource%20Files/DFS.mp4)](./Resource%20Files/DFS.mp4)
 
 
 
